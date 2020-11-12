@@ -9,13 +9,13 @@
     </head>
     <body>
 
-        <div class="wrapper">
+        <div id="root" class="wrapper">
             <div class="color-top">
             </div>
             <div class="container">
                 <div class="app-box">
                     <div class="contacts-box">
-                        <div class="nav-contacts">
+                        <div class="side-contacts">
                             <div class="nav left">
                                 <div class="avatar-box">
                                     <img src="avatars_imgs/avatar_user.png" alt="">
@@ -37,12 +37,29 @@
                                 </div>
 
                             </div>
+                            <div class="search-chat">
+
+                                <i class="fas fa-search"></i>
+
+                                <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+
+                            </div>
                             <div class="all-chats">
-                                <div class="search-chat">
 
-                                    <i class="fas fa-search"></i>
+                                <div class="contacts-chat">
+                                    <div class="data-contact" v-for="(user, index) in contacts">
+                                        <div class="avatar-box">
+                                            <img :src="'avatars_imgs/avatar'+user.avatar+'.png'" alt="">
+                                        </div>
+                                        <div class="name-mess">
+                                            <h3>{{user.name}}</h3>
+                                            <p>Voglio essere uno sviluppatore!</p>
+                                        </div>
+                                        <div class="time-info">
+                                            <span>20:40</span>
+                                        </div>
 
-                                    <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+                                    </div>
 
                                 </div>
                             </div>
@@ -75,6 +92,11 @@
                             <p class="sent-messages">tutto bene?</p>
                             <p class="received-messages">Uee!! tutto bene e tu?! </p>
                             <p class="sent-messages">tutto bene</p>
+                        </div>
+                        <div class="chat-input">
+                            <span><i class="far fa-smile fa-2x"></i></span>
+                            <input id="input-text" type="text" name="" value="" placeholder="scrivi un messaggio">
+                            <span><i class="fas fa-microphone fa-2x"></i></span>
                         </div>
                     </div>
                 </div>
