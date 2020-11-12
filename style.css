@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body{
+    background-color: lightgrey;
+    position:
+
 }
 
 h3, h4{
@@ -17,20 +24,19 @@ h3, h4{
 .wrapper{
     width: 100%;
     height: 100vh;
-    background-color: lightgrey;
     position:absolute;
 
 }
 
 .container{
     width:1200px;
-    height: 800px;
+    height: auto;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 20px auto;
 
 }
 
@@ -176,7 +182,7 @@ img{
 .all-chats{
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .sent-messages{
