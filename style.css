@@ -11,7 +11,7 @@ h3, h4{
 .color-top {
     width: 100%;
     height: 200px;
-    background-color: RGB(1, 191, 165);
+    background-color: #128C7E;
 }
 
 .wrapper{
@@ -48,7 +48,7 @@ h3, h4{
 }
 .chat-box{
     width: 65%;
-    background-image: url(https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25);
+    background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
 }
 
 .nav-contacts{
@@ -111,7 +111,7 @@ img{
 .notify {
     width: 100%;
     height: 90px;
-    background-color: lightblue;
+    background-color: #34B7F1;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -132,7 +132,7 @@ img{
 
 .notify i {
     font-size: 32px;
-    color: lightblue;
+    color: #34B7F1;
 }
 
 .notify-text p {
@@ -154,3 +154,21 @@ img{
 .search-chat input {
     border: none;
     width: 80%;
+}
+.sent-messages{
+    background-color: rgba(77, 271, 162);
+    float: right;
+}
+
+.received-messages{
+    background-color: #fff;
+    float: left;
+}
+
+.sent-messages, .received-messages{
+    padding: 10px 6px;
+    margin: 6px 50px;
+    clear: both;
+    border-radius: 6px;
+    color: #111;
+}
