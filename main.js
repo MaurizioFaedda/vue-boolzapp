@@ -6,6 +6,11 @@ var app = new Vue ({
         contactsIndex: 0,
         index: '',
 
+        user: {
+            name: 'Maurizio',
+            avatar: 'user'
+        },
+
         contacts:
         [
             {

@@ -19,9 +19,15 @@
                     <div class="contacts-box">
                         <div class="side-contacts">
                             <div class="nav left">
-                                <div class="avatar-box">
-                                    <img src="avatars_imgs/avatar_user.png" alt="">
+                                <div class="nav-chat-left">
+                                    <div class="avatar-box">
+                                        <img :src="'avatars_imgs/avatar_'+user.avatar+'.png'" alt="">
+                                    </div>
+                                    <div class="name">
+                                        <h3>{{user.name}}</h3>
+                                    </div>
                                 </div>
+
                                 <div class="icon-box">
                                     <i class="fas fa-circle-notch"></i>
                                     <i class="fas fa-comment-alt"></i>
@@ -49,12 +55,12 @@
                             <div class="all-chats">
 
                                 <div class="contacts-chat">
-                                    <div @click="change(index)" class="data-contact" v-for="(user, index) in contacts">
+                                    <div @click="change(index)" class="data-contact" v-for="(item, index) in contacts">
                                         <div class="avatar-box">
-                                            <img :src="'avatars_imgs/avatar'+user.avatar+'.png'" alt="">
+                                            <img :src="'avatars_imgs/avatar'+item.avatar+'.png'" alt="">
                                         </div>
                                         <div class="name-mess">
-                                            <h3>{{user.name}}</h3>
+                                            <h3>{{item.name}}</h3>
                                             <p>Voglio essere uno sviluppatore!</p>
                                         </div>
                                         <div class="time-info">
