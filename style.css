@@ -191,26 +191,24 @@ img{
     position: relative;
 }
 
-.loop-message.received .dropdown-menu {
+.dropdown-menu {
     width: 120px;
     position: absolute;
-    background-color: #dcf8c6;
-    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 2px;
     z-index: 1;
-    left: 5px;
     top: 12px;
 }
 
+.loop-message.received .dropdown-menu {
+    background-color: #dcf8c6;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    left: 5px;
+}
+
 .loop-message.sent .dropdown-menu{
-    width: 120px;
-    position: absolute;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    z-index: 1;
     right: 5px;
-    top: 12px;
 }
 
 
