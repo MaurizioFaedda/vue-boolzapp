@@ -6,6 +6,7 @@ var app = new Vue ({
         contactsIndex: 0,
         index: '',
         new_message: '',
+        search: '',
 
         user: {
             name: 'Maurizio',
@@ -222,6 +223,14 @@ var app = new Vue ({
         }
 
 
+    },
+
+    computed: {
+        filteredChat: function(){
+            return this.contacts.filter((item) => {
+                return item.name.match(this.search)
+            })
+        }
     }
 
 })
