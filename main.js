@@ -3,6 +3,7 @@ var app = new Vue ({
     el: '#root',
 
     data:{
+        contactsIndex: 2,
 
         contacts:
         [
@@ -122,6 +123,7 @@ var app = new Vue ({
                 ],
             }
         ],
+
     },
 
     methods: {

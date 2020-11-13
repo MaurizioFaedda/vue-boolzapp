@@ -15,6 +15,7 @@
             </div>
             <div class="container">
                 <div class="app-box">
+                    <!---    lista chat contatti box-sinistra    -->
                     <div class="contacts-box">
                         <div class="side-contacts">
                             <div class="nav left">
@@ -67,6 +68,7 @@
                         </div>
 
                     </div>
+                    <!--          box live-chat corrente         -->
                     <div class="chat-box">
                         <div class="nav-chat">
                             <div class="nav">
@@ -89,10 +91,10 @@
 
                         </div>
                         <div class="chat-messages">
-                            <p class="sent-messages">ciao!!</p>
-                            <p class="sent-messages">tutto bene?</p>
-                            <p class="received-messages">Uee!! tutto bene e tu?! </p>
-                            <p class="sent-messages">tutto bene</p>
+
+                            <div v-for="item in contacts[contactsIndex].messages"
+                            :class="item.status">{{item.message}}</div>
+
                         </div>
                         <div class="chat-input">
                             <span><i class="far fa-smile fa-2x"></i></span>
