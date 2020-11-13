@@ -3,13 +3,14 @@ var app = new Vue ({
     el: '#root',
 
     data:{
-        contactsIndex: 2,
+        contactsIndex: 0,
+        index: '',
 
         contacts:
         [
             {
                 name: 'Mauro',
-                avatar: '_1',
+                avatar: '_0',
                 visible: true,
                 messages: [
                     {
@@ -31,7 +32,7 @@ var app = new Vue ({
             },
             {
                 name: 'Sara',
-                avatar: '_2',
+                avatar: '_1',
                 visible: true,
                 messages: [
                     {
@@ -53,7 +54,7 @@ var app = new Vue ({
             },
             {
                 name: 'John',
-                avatar: '_3',
+                avatar: '_2',
                 visible: true,
                 messages: [
                     {
@@ -75,7 +76,7 @@ var app = new Vue ({
             },
             {
                 name: 'Emy',
-                avatar: '_4',
+                avatar: '_3',
                 visible: true,
                 messages: [
                     {
@@ -92,34 +93,85 @@ var app = new Vue ({
             },
             {
                 name: 'Bob',
-                avatar: '_5',
+                avatar: '_4',
                 visible: true,
                 messages: [
-
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Hai portato a spasso il cane?',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Ricordati di dargli da mangiare',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 16:15:22',
+                    message: 'Tutto fatto!',
+                    status: 'received'
+                    }
                 ],
             },
             {
                 name: 'Paul',
-                avatar: '_6',
+                avatar: '_5',
                 visible: true,
                 messages: [
-
+                    {
+                    date: '20/03/2020 16:30:00',
+                    message: 'Ciao come stai?',
+                    status: 'sent'
+                    },
+                    {
+                    date: '20/03/2020 16:30:55',
+                    message: 'Bene grazie! Stasera ci vediamo?',
+                    status: 'received'
+                    },
+                    {
+                    date: '20/03/2020 16:35:00',
+                    message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                    status: 'received'
+                    }
                 ],
             },
             {
                 name: 'Janis',
-                avatar: '_7',
+                avatar: '_6',
                 visible: true,
                 messages: [
-
+                    {
+                    date: '28/03/2020 10:10:40',
+                    message: 'La Marianna va in campagna',
+                    status: 'received'
+                    },
+                    {
+                    date: '28/03/2020 10:20:10',
+                    message: 'Sicuro di non aver sbagliato chat?',
+                    status: 'sent'
+                    },
+                    {
+                    date: '28/03/2020 16:15:22',
+                    message: 'Ah scusa!',
+                    status: 'received'
+                    }
                 ],
             },
             {
                 name: 'Jim',
-                avatar: '_8',
+                avatar: '_7',
                 visible: true,
                 messages: [
-
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 15:50:00',
+                    message: 'Si, ma preferirei andare al cinema',
+                    status: 'received'
+                    }
                 ],
             }
         ],
@@ -127,7 +179,9 @@ var app = new Vue ({
     },
 
     methods: {
-
+        change(index){
+            this.contactsIndex = index;
+        }
     }
 
 })

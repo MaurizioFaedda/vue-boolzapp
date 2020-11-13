@@ -49,7 +49,7 @@
                             <div class="all-chats">
 
                                 <div class="contacts-chat">
-                                    <div class="data-contact" v-for="(user, index) in contacts">
+                                    <div @click="change(index)" class="data-contact" v-for="(user, index) in contacts">
                                         <div class="avatar-box">
                                             <img :src="'avatars_imgs/avatar'+user.avatar+'.png'" alt="">
                                         </div>
@@ -74,10 +74,10 @@
                             <div class="nav">
                                 <div class="nav-chat-left">
                                     <div class="avatar-box">
-                                        <img src="avatars_imgs/avatar_1.png" alt="">
+                                        <img :src="'avatars_imgs/avatar_'+contactsIndex+'.png'" alt="">
                                     </div>
                                     <div class="name">
-                                        <h3>Mauro</h3>
+                                        <h3>{{contacts[contactsIndex].name}}</h3>
                                         <p>Ultimo accesso oggi alle 15.40</p>
                                     </div>
                                 </div>
