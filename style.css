@@ -186,18 +186,25 @@ img{
     overflow-y: auto;
 }
 
-.sent{
-    background-color: #dcf8c6;
-    float: right;
+.loop-message{
+    position: relative;
 }
 
-.received{
-    background-color: #fff;
-    float: left;
+.loop-message i{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 12px;
 }
+
+.loop-message.received i {
+    left: 5px;
+}
+
+
 
 .sent, .received{
-    padding: 12px;
+    padding: 10px;
     margin: 10px 50px;
     clear: both;
     border-radius: 6px;
@@ -205,6 +212,18 @@ img{
     max-width: 400px;
 }
 
+.sent{
+    background-color: #dcf8c6;
+    float: right;
+    padding-right: 30px;
+}
+
+.received{
+    background-color: #fff;
+    float: left;
+    padding-left: 30px;
+
+}
 .chat-input{
     width: 100%;
     height: 80px;

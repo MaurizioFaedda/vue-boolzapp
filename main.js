@@ -190,7 +190,6 @@ var app = new Vue ({
             this.contactsIndex = index;
         },
         sent_new_message(element, i) {
-          // aggiungo l'item in list e di coseguenza viene stampata grazie al v-for nell'html
           this.contacts[i].messages.push({
               date: '',
               message: element,

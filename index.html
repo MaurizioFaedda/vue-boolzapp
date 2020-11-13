@@ -98,8 +98,10 @@
                         </div>
                         <div class="chat-messages">
 
-                            <div v-for="item in contacts[contactsIndex].messages"
-                            :class="item.status">{{item.message}}</div>
+                            <div class="loop-message" v-for="item in contacts[contactsIndex].messages"
+                                :class="item.status">{{item.message}}
+                                <i class="fas fa-angle-down"></i>
+                            </div>
 
                         </div>
                         <div class="chat-input">
