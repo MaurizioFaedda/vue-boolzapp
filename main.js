@@ -5,6 +5,7 @@ var app = new Vue ({
     data:{
         contactsIndex: 0,
         index: '',
+        new_message: '',
 
         user: {
             name: 'Maurizio',
@@ -53,7 +54,7 @@ var app = new Vue ({
                     {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'sent'
                     }
                 ],
             },
@@ -136,7 +137,7 @@ var app = new Vue ({
                     {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'sent'
                     }
                 ],
             },
@@ -186,7 +187,18 @@ var app = new Vue ({
     methods: {
         change(index){
             this.contactsIndex = index;
+        },
+        sent_new_message(element, i) {
+          // aggiungo l'item in list e di coseguenza viene stampata grazie al v-for nell'html
+          this.contacts[i].messages.push({
+              date: '',
+              message: element,
+              status: 'sent'
+
+          })
+          this.new_message = ''
         }
+
     }
 
 })
