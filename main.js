@@ -197,7 +197,16 @@ var app = new Vue ({
 
           })
           this.new_message = ''
+        },
+
+        received_new_message(i){
+            this.contacts[i].messages.push({
+                date: '',
+                message: 'Si hai ragione',
+                status: 'received'
+            })
         }
+
 
     }
 
