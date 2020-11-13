@@ -121,7 +121,7 @@ var app = new Vue ({
                 ],
             },
             {
-                name: 'Paul',
+                name: 'Joe',
                 avatar: '_5',
                 visible: true,
                 messages: [
