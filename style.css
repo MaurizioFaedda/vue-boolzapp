@@ -88,6 +88,7 @@ i, p {
     color: rgba(0, 0, 0, 0.5);
 }
 
+
 .left{
     border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -188,6 +189,39 @@ img{
 
 .loop-message{
     position: relative;
+}
+
+.loop-message.received .dropdown-menu {
+    position: absolute;
+    background-color: #dcf8c6;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    z-index: 1;
+    left: 5px;
+    top: 12px;
+}
+
+.loop-message.sent .dropdown-menu{
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    z-index: 1;
+    right: 5px;
+    top: 12px;
+}
+
+
+
+ul {
+    text-align: left;
+
+}
+
+li{
+    list-style-type: none;
+    margin: 10px 14px;
+    font-size: 12px;
 }
 
 .loop-message i{

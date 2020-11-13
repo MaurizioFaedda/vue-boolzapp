@@ -101,12 +101,16 @@
                             <div class="loop-message" v-for="item in contacts[contactsIndex].messages"
                                 :class="item.status">{{item.message}}
                                 <i class="fas fa-angle-down"></i>
+                                <ul class="dropdown-menu">
+                                    <li>Message info</li>
+                                    <li>Delete message</li>
+                                </ul>
                             </div>
 
                         </div>
                         <div class="chat-input">
                             <span><i class="far fa-smile fa-2x"></i></span>
-                            <input v-model="new_message" v-on:keyup.enter="sent_new_message(new_message, contactsIndex), received_new_message(contactsIndex)" id="input-text" type="text" name="" value="" placeholder="scrivi un messaggio">
+                            <input v-model="new_message" v-on:keyup.enter="sent_new_message(new_message, contactsIndex), received_new_message(contactsIndex)" id="input-text" type="text" placeholder="scrivi un messaggio">
                             <!-- <i @click="sent_new_message(new_message)" class="fas fa-paper-plane fa-2x"></i> -->
                             <span><i class="fas fa-microphone fa-2x"></i></span>
                         </div>
