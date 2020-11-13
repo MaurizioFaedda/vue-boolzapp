@@ -228,7 +228,7 @@ var app = new Vue ({
     computed: {
         filteredChat: function(){
             return this.contacts.filter((item) => {
-                return item.name.match(this.search)
+                return item.name.toLowerCase().match(this.search.toLowerCase())
             })
         }
     }
