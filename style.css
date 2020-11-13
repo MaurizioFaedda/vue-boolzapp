@@ -192,6 +192,7 @@ img{
 }
 
 .loop-message.received .dropdown-menu {
+    width: 120px;
     position: absolute;
     background-color: #dcf8c6;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -202,6 +203,7 @@ img{
 }
 
 .loop-message.sent .dropdown-menu{
+    width: 120px;
     position: absolute;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -211,12 +213,6 @@ img{
     top: 12px;
 }
 
-
-
-ul {
-    text-align: left;
-
-}
 
 li{
     list-style-type: none;
