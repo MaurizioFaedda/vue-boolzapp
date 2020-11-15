@@ -197,6 +197,7 @@ img{
     border-radius: 2px;
     z-index: 1;
     top: 12px;
+    display: none;
 }
 
 .loop-message.received .dropdown-menu {
@@ -287,4 +288,8 @@ li{
 
 .name-mess p{
     margin-top: 6px;
+}
+
+.active{
+    display: block;
 }

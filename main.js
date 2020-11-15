@@ -4,15 +4,16 @@ var app = new Vue ({
 
     data:{
         contactsIndex: 0,
+        messagesIndex: '',
         index: '',
         new_message: '',
         search: '',
+        item: '',
 
         user: {
             name: 'Maurizio',
             avatar: 'user'
         },
-
         contacts:
         [
             {
@@ -23,17 +24,24 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
+                    isActive: false,
                     status: 'sent'
+
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di dargli da mangiare',
+                    isActive: false,
                     status: 'sent'
+
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
+                    isActive: false,
                     status: 'received'
+
+
                     }
                 ],
             },
@@ -45,16 +53,19 @@ var app = new Vue ({
                     {
                     date: '20/03/2020 16:30:00',
                     message: 'Ciao come stai?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '20/03/2020 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
+                    isActive: false,
                     status: 'received'
                     },
                     {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                    isActive: false,
                     status: 'sent'
                     }
                 ],
@@ -67,16 +78,19 @@ var app = new Vue ({
                     {
                     date: '28/03/2020 10:10:40',
                     message: 'La Marianna va in campagna',
+                    isActive: false,
                     status: 'received'
                     },
                     {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
+                    isActive: false,
                     status: 'received'
                     }
                 ],
@@ -89,11 +103,13 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
+                    isActive: false,
                     status: 'received'
                     }
                 ],
@@ -106,16 +122,19 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ricordati di dargli da mangiare',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
+                    isActive: false,
                     status: 'received'
                     }
                 ],
@@ -128,16 +147,19 @@ var app = new Vue ({
                     {
                     date: '20/03/2020 16:30:00',
                     message: 'Ciao come stai?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '20/03/2020 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
+                    isActive: false,
                     status: 'received'
                     },
                     {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                    isActive: false,
                     status: 'sent'
                     }
                 ],
@@ -150,16 +172,19 @@ var app = new Vue ({
                     {
                     date: '28/03/2020 10:10:40',
                     message: 'La Marianna va in campagna',
+                    isActive: false,
                     status: 'received'
                     },
                     {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
+                    isActive: false,
                     status: 'received'
                     }
                 ],
@@ -172,11 +197,13 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    isActive: false,
                     status: 'sent'
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
+                    isActive: false,
                     status: 'received'
                     }
                 ],
@@ -193,21 +220,23 @@ var app = new Vue ({
           this.contacts[i].messages.push({
               date: '',
               message: element,
-              status: 'sent'
+              status: 'sent',
+              isActive: false
 
           })
           this.new_message = ''
         },
 
-        received_new_message(i) {
-
-                this.contacts[i].messages.push({
-                date: '',
-                message: 'Si hai ragione',
-                status: 'received'
-
-            })
-        },
+        // received_new_message(i) {
+        //
+        //         this.contacts[i].messages.push({
+        //         date: '',
+        //         message: 'Si hai ragione',
+        //         status: 'received',
+        //         isActive: false
+        //
+        //     })
+        // },
         received_new_message(i) {
 
 
@@ -215,12 +244,43 @@ var app = new Vue ({
                     this.contacts[i].messages.push({
                     date: '',
                     message: 'Si hai ragione!',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
               })
           }, 1000)
 
-        }
+        },
 
+        add_class(item) {
+
+            if (item.isActive == false) {
+                item.isActive = true
+            } else item.isActive = false
+
+        },
+
+        remove_item: function(contactsIndex, messagesIndex) {
+
+            let myItem = this.contacts[contactsIndex].messages;
+
+            // myItem.isActive = false;
+
+            myItem.splice(messagesIndex, 1);
+
+
+        },
+
+
+        // push_on_click(i){
+        //     this.contacts[i].messages.push({
+        //         isActive: false
+        //     })
+        // }
+        // removeClass: function() {
+        //     if (remove_item() == true) {
+        //         myItem.isActive = false
+        //     }
+        // }
 
     },
 
@@ -230,6 +290,11 @@ var app = new Vue ({
                 return item.name.toLowerCase().match(this.search.toLowerCase())
             })
         }
-    }
+    },
+
+    // created() {
+    //     this.removeClass ()
+    //
+    // }
 
 })

@@ -98,12 +98,12 @@
                         </div>
                         <div class="chat-messages">
 
-                            <div class="loop-message" v-for="item in contacts[contactsIndex].messages"
+                            <div @click="add_class(item) " class="loop-message" v-for="(item, messagesIndex) in contacts[contactsIndex].messages"
                                 :class="item.status">{{item.message}}
-                                <i class="fas fa-angle-down"></i>
-                                <ul class="dropdown-menu">
+                                <i  class="fas fa-angle-down"></i>
+                                <ul class="dropdown-menu" :class="{active: item.isActive}">
                                     <li>Message info</li>
-                                    <li>Delete message</li>
+                                    <li @click="remove_item(contactsIndex, messagesIndex)" >Delete message</li>
                                 </ul>
                             </div>
 
