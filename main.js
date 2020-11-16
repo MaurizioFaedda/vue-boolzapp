@@ -1,7 +1,4 @@
-let m = moment();
-console.log(` toString() => ${m.toString()}`);
-console.log(` toISOString() => ${m.toISOString()}`);
-
+let t =  moment().toObject();
 
 var app = new Vue ({
 
@@ -15,6 +12,10 @@ var app = new Vue ({
         search: '',
         item: '',
 
+
+
+
+
         user: {
             name: 'Maurizio',
             avatar: 'user'
@@ -27,28 +28,28 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: t,
                     message: 'Hai portato a spasso il cane?',
                     isActive: false,
                     status: 'sent'
 
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: t,
                     message: 'Ricordati di dargli da mangiare',
                     isActive: false,
                     status: 'sent'
 
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: t,
                     message: 'Tutto fatto!',
                     isActive: false,
                     status: 'received'
 
 
                     }
-                ],
+                ]
             },
             {
                 name: 'Sara',
@@ -56,19 +57,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '20/03/2020 16:30:00',
+                    date: t,
                     message: 'Ciao come stai?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '20/03/2020 16:30:55',
+                    date: t,
                     message: 'Bene grazie! Stasera ci vediamo?',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: '20/03/2020 16:35:00',
+                    date: t,
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     isActive: false,
                     status: 'sent'
@@ -81,19 +82,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '28/03/2020 10:10:40',
+                    date: t,
                     message: 'La Marianna va in campagna',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: '28/03/2020 10:20:10',
+                    date: t,
                     message: 'Sicuro di non aver sbagliato chat?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '28/03/2020 16:15:22',
+                    date: t,
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -106,13 +107,13 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: t,
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: t,
                     message: 'Si, ma preferirei andare al cinema',
                     isActive: false,
                     status: 'received'
@@ -125,19 +126,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: t,
                     message: 'Hai portato a spasso il cane?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: t,
                     message: 'Ricordati di dargli da mangiare',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: t,
                     message: 'Tutto fatto!',
                     isActive: false,
                     status: 'received'
@@ -150,19 +151,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '20/03/2020 16:30:00',
+                    date: t,
                     message: 'Ciao come stai?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '20/03/2020 16:30:55',
+                    date: t,
                     message: 'Bene grazie! Stasera ci vediamo?',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: '20/03/2020 16:35:00',
+                    date: t,
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     isActive: false,
                     status: 'sent'
@@ -175,19 +176,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '28/03/2020 10:10:40',
+                    date: t,
                     message: 'La Marianna va in campagna',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: '28/03/2020 10:20:10',
+                    date: t,
                     message: 'Sicuro di non aver sbagliato chat?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '28/03/2020 16:15:22',
+                    date: t,
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -200,31 +201,35 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: t,
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: t,
                     message: 'Si, ma preferirei andare al cinema',
                     isActive: false,
                     status: 'received'
                     }
                 ],
             }
-        ],
+        ]
 
     },
 
     methods: {
 
+
+
         change(index){
             this.contactsIndex = index;
         },
+
         sent_new_message(element, i) {
+            let t = moment().toObject();
           this.contacts[i].messages.push({
-              date: '',
+              date: t,
               message: element,
               status: 'sent',
               isActive: false
@@ -247,8 +252,9 @@ var app = new Vue ({
 
 
                 setTimeout(() => {
+                    let t = moment().toObject();
                     this.contacts[i].messages.push({
-                    date: '',
+                    date: t,
                     message: 'Si hai ragione!',
                     status: 'received',
                     isActive: false
@@ -300,7 +306,11 @@ var app = new Vue ({
             return this.contacts.filter((item) => {
                 return item.name.toLowerCase().match(this.search.toLowerCase())
             })
-        }
-    }
+        },
 
+    },
+
+  //   created: function (t) {
+  //   t =  moment().toObject();
+  // }
 })

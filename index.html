@@ -101,6 +101,7 @@
                             <div @click="add_class(item) " class="loop-message" v-for="(item, messagesIndex) in contacts[contactsIndex].messages"
                                 :class="item.status">{{item.message}}
                                 <i  class="fas fa-angle-down"></i>
+                                <span>{{item.date.hours}}:{{item.date.minutes}}:{{item.date.seconds}}</span>
                                 <ul class="dropdown-menu" :class="{active: item.isActive}">
                                     <li>Message info</li>
                                     <li @click="remove_item(contactsIndex, messagesIndex), add_class(item)" >Delete message</li>
