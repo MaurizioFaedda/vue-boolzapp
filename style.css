@@ -196,6 +196,11 @@ img{
     position: relative;
 }
 
+.name span{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6)
+}
+
 .dropdown-menu {
     width: 120px;
     position: absolute;
@@ -286,6 +291,9 @@ li{
     padding: 10px;
     border-radius: 4px;
 }
+
+
+
 
 .data-contact{
     width: 100%;

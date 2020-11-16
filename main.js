@@ -15,6 +15,8 @@ var app = new Vue ({
         search: '',
         item: '',
         t: '',
+        iIcon: '0',
+        icon: ['fa-microphone', 'fa-paper-plane'],
         // hh_mm: view_hh_mm,
 
 
@@ -250,6 +252,18 @@ var app = new Vue ({
 
     methods: {
 
+        sentIcon(iIcon) {
+            if (this.iIcon == 0) {
+                this.iIcon = 1
+            }
+
+        },
+
+        micIcon(iIcon) {
+            if (this.iIcon == 1) {
+                this.iIcon = 0
+            }
+        },
 
 
         change(index){
@@ -344,7 +358,7 @@ var app = new Vue ({
             return this.contacts.filter((item) => {
                 return item.name.toLowerCase().match(this.search.toLowerCase())
             })
-        },
+        }
 
         // myTime(contactsIndex) {
         //
