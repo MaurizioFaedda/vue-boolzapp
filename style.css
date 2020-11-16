@@ -181,6 +181,11 @@ img{
     outline: none;
 }
 
+.time-info span {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6)
+}
+
 .all-chats{
     width: 100%;
     height: 100vh;

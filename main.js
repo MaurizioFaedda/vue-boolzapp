@@ -1,5 +1,5 @@
 let t =  moment().format('HH:mm:ss, MM DD YYYY');
-let view_hh_mm = t.slice(0, 8);
+let view_hh_mm = t.slice(0, 5);
 
 
 
