@@ -212,6 +212,10 @@ img{
     right: 5px;
 }
 
+.dropdown-menu li:last-child, .fa-angle-down {
+    cursor: pointer;
+}
+
 
 li{
     list-style-type: none;

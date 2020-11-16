@@ -1,4 +1,7 @@
-console.log(moment());
+let m = moment();
+console.log(` toString() => ${m.toString()}`);
+console.log(` toISOString() => ${m.toISOString()}`);
+
 
 var app = new Vue ({
 
@@ -215,6 +218,7 @@ var app = new Vue ({
     },
 
     methods: {
+
         change(index){
             this.contactsIndex = index;
         },
@@ -265,9 +269,14 @@ var app = new Vue ({
 
             let myItem = this.contacts[contactsIndex].messages;
 
-            // myItem.isActive = false;
+            myItem[messagesIndex].isActive = false;
 
-            myItem.splice(messagesIndex, 1);
+            // uso un setTimeout per dare il tempo di portare isActive=false in questo
+            // modo l'indice successivo che diventerà l'indice corrente non avrà isActive=true quindi il dropdown aperto
+            setTimeout(() => {
+                myItem.splice(messagesIndex, 1);
+
+            }, 0001)
 
 
         },
@@ -292,11 +301,6 @@ var app = new Vue ({
                 return item.name.toLowerCase().match(this.search.toLowerCase())
             })
         }
-    },
-
-    // created() {
-    //     this.removeClass ()
-    //
-    // }
+    }
 
 })
