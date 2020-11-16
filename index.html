@@ -103,7 +103,7 @@
                                 <i  class="fas fa-angle-down"></i>
                                 <ul class="dropdown-menu" :class="{active: item.isActive}">
                                     <li>Message info</li>
-                                    <li @click="remove_item(contactsIndex, messagesIndex)" >Delete message</li>
+                                    <li @click="remove_item(contactsIndex, messagesIndex), add_class(item)" >Delete message</li>
                                 </ul>
                             </div>
 
@@ -123,5 +123,6 @@
         </div>
 
         <script src="main.js" charset="utf-8"></script>
+        <script src="lib/moment/moment.min.js" charset="utf-8"></script>
     </body>
 </html>

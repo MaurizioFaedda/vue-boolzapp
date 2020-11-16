@@ -1,3 +1,5 @@
+console.log(moment());
+
 var app = new Vue ({
 
     el: '#root',
