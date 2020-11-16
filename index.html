@@ -84,7 +84,8 @@
                                     </div>
                                     <div class="name">
                                         <h3>{{contacts[contactsIndex].name}}</h3>
-                                        <p>Ultimo accesso oggi alle 15.40</p>
+                                        <p>Ultimo accesso oggi alle</p>
+                                        <span>{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.hours}}:{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.minutes}}:{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.seconds}}</span>
                                     </div>
                                 </div>
 
