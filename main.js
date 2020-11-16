@@ -323,6 +323,8 @@ var app = new Vue ({
 
         },
 
+
+
         remove_item: function(contactsIndex, messagesIndex) {
 
             let myItem = this.contacts[contactsIndex].messages;
@@ -368,8 +370,8 @@ var app = new Vue ({
         //     return
         //
         // }
-    },
 
+    }
 
 
 })

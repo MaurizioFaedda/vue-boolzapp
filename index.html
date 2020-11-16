@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="name-mess">
                                             <h3>{{item.name}}</h3>
-                                            <p>Voglio essere uno sviluppatore!</p>
+                                            <p>{{item.messages[item.messages.length - 1].message}}</p>
                                         </div>
                                         <div class="time-info">
                                             <span>{{item.messages[item.messages.length - 1].dateView}}</span>
@@ -111,10 +111,10 @@
 
                         </div>
                         <div class="chat-input">
-                            <span><i onblur="micIcon(iIcon)" class="far fa-smile fa-2x"></i></span>
+                            <span><i onblur="micIcon(iIcon)" class="far fa-smile fa-"></i></span>
                             <input @focus="sentIcon(iIcon)" @blur="micIcon(iIcon)" v-model="new_message" v-on:keyup.enter="sent_new_message(new_message, contactsIndex), received_new_message(contactsIndex)" id="input-text" type="text" placeholder="scrivi un messaggio">
                             <i @click="sent_new_message(new_message, contactsIndex), received_new_message(contactsIndex), micIcon(iIcon)"
-                            :class="'fas fa-2x '+ icon[iIcon]">
+                            :class="'fas '+ icon[iIcon]">
                          </i>
                             <!-- <span><i class="fas fa-microphone fa-2x"></i></span>
                             <span><i class="fas fa-paper-plane fa-2x"></i> </span> -->
