@@ -64,7 +64,7 @@
                                             <p>Voglio essere uno sviluppatore!</p>
                                         </div>
                                         <div class="time-info">
-                                            <span>{{item.messages[item.messages.length - 1].date.hours}}:{{item.messages[item.messages.length - 1].date.minutes}}:{{item.messages[item.messages.length - 1].date.seconds}}</span>
+                                            <span>{{item.messages[item.messages.length - 1].dateView}}</span>
                                         </div>
 
                                     </div>
@@ -85,7 +85,7 @@
                                     <div class="name">
                                         <h3>{{contacts[contactsIndex].name}}</h3>
                                         <p>Ultimo accesso oggi alle</p>
-                                        <span>{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.hours}}:{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.minutes}}:{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.seconds}}</span>
+                                        <span>{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].dateView}}</span>
                                     </div>
                                 </div>
 
@@ -102,7 +102,7 @@
                             <div @click="add_class(item) " class="loop-message" v-for="(item, messagesIndex) in contacts[contactsIndex].messages"
                                 :class="item.status">{{item.message}}
                                 <i  class="fas fa-angle-down"></i>
-                                <span>{{item.date.hours}}:{{item.date.minutes}}:{{item.date.seconds}}</span>
+                                <span>{{item.dateView}}</span>
                                 <ul class="dropdown-menu" :class="{active: item.isActive}">
                                     <li>Message info</li>
                                     <li @click="remove_item(contactsIndex, messagesIndex), add_class(item)" >Delete message</li>

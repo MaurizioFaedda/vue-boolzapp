@@ -1,4 +1,6 @@
-let t =  moment().toObject();
+let t =  moment().format('HH:mm:ss, MM DD YYYY');
+let view_hh_mm = t.slice(0, 8);
+
 
 
 var app = new Vue ({
@@ -12,6 +14,8 @@ var app = new Vue ({
         new_message: '',
         search: '',
         item: '',
+        t: '',
+        // hh_mm: view_hh_mm,
 
 
 
@@ -31,6 +35,7 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Hai portato a spasso il cane?',
                     isActive: false,
                     status: 'sent'
@@ -38,6 +43,8 @@ var app = new Vue ({
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
+
                     message: 'Ricordati di dargli da mangiare',
                     isActive: false,
                     status: 'sent'
@@ -45,6 +52,8 @@ var app = new Vue ({
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
+
                     message: 'Tutto fatto!',
                     isActive: false,
                     status: 'received'
@@ -60,18 +69,21 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Ciao come stai?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Bene grazie! Stasera ci vediamo?',
                     isActive: false,
                     status: 'received'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     isActive: false,
                     status: 'sent'
@@ -85,18 +97,21 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'La Marianna va in campagna',
                     isActive: false,
                     status: 'received'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Sicuro di non aver sbagliato chat?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -110,12 +125,14 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Si, ma preferirei andare al cinema',
                     isActive: false,
                     status: 'received'
@@ -129,18 +146,21 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Hai portato a spasso il cane?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Ricordati di dargli da mangiare',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Tutto fatto!',
                     isActive: false,
                     status: 'received'
@@ -154,18 +174,21 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Ciao come stai?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Bene grazie! Stasera ci vediamo?',
                     isActive: false,
                     status: 'received'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     isActive: false,
                     status: 'sent'
@@ -179,18 +202,21 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'La Marianna va in campagna',
                     isActive: false,
                     status: 'received'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Sicuro di non aver sbagliato chat?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -204,12 +230,14 @@ var app = new Vue ({
                 messages: [
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Si, ma preferirei andare al cinema',
                     isActive: false,
                     status: 'received'
@@ -229,9 +257,13 @@ var app = new Vue ({
         },
 
         sent_new_message(element, i) {
-            let t = moment().toObject();
+            let t =  moment().format('HH:mm:ss, MM DD YYYY');
+            let view_hh_mm = t.slice(0, 8);
+
+            // let view_hh_mm = t.slice(0, 8);
           this.contacts[i].messages.push({
               date: t,
+              dateView: view_hh_mm,
               message: element,
               status: 'sent',
               isActive: false
@@ -254,9 +286,12 @@ var app = new Vue ({
 
 
                 setTimeout(() => {
-                    let t = moment().toObject();
+                    let t =  moment().format('HH:mm:ss, MM DD YYYY');
+                    let view_hh_mm = t.slice(0, 8);
+
                     this.contacts[i].messages.push({
                     date: t,
+                    dateView: view_hh_mm,
                     message: 'Si hai ragione!',
                     status: 'received',
                     isActive: false
@@ -264,6 +299,7 @@ var app = new Vue ({
           }, 1000)
 
         },
+
 
         add_class(item) {
 
@@ -309,20 +345,17 @@ var app = new Vue ({
                 return item.name.toLowerCase().match(this.search.toLowerCase())
             })
         },
-        myTime(contactsIndex) {
 
-            let hour = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.hours;
-            let minutes = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.minutes;
+        // myTime(contactsIndex) {
+        //
+        //     let hour = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.hours;
+        //     let minutes = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.minutes;
+        //
+        //     return
+        //
+        // }
+    },
 
-            return
 
-        }
-    }
 
-  //   created: function () {
-  //
-  //       let hour = this.contacts[0].messages[this.contacts[contactsIndex].messages.length - 1].date.hours;
-  //       let minutes = this.contacts[0].messages[this.contacts[0].messages.length - 1].date.minutes;
-  //
-  // }
 })
