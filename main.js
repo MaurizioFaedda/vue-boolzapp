@@ -16,6 +16,7 @@ var app = new Vue ({
 
 
 
+
         user: {
             name: 'Maurizio',
             avatar: 'user'
@@ -307,10 +308,20 @@ var app = new Vue ({
                 return item.name.toLowerCase().match(this.search.toLowerCase())
             })
         },
+        myTime(contactsIndex) {
 
-    },
+            let hour = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.hours;
+            let minutes = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.minutes;
 
-  //   created: function (t) {
-  //   t =  moment().toObject();
+            return
+
+        }
+    }
+
+  //   created: function () {
+  //
+  //       let hour = this.contacts[0].messages[this.contacts[contactsIndex].messages.length - 1].date.hours;
+  //       let minutes = this.contacts[0].messages[this.contacts[0].messages.length - 1].date.minutes;
+  //
   // }
 })

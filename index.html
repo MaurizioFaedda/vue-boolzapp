@@ -55,7 +55,7 @@
                             <div class="all-chats">
 
                                 <div class="contacts-chat">
-                                    <div @click="change(index)" class="data-contact" v-for="(item, index) in filteredChat">
+                                    <div @click="change(contactsIndex)" class="data-contact" v-for="(item, contactsIndex) in filteredChat">
                                         <div class="avatar-box">
                                             <img :src="'avatars_imgs/avatar'+item.avatar+'.png'" alt="">
                                         </div>
@@ -64,7 +64,7 @@
                                             <p>Voglio essere uno sviluppatore!</p>
                                         </div>
                                         <div class="time-info">
-                                            <span>20:30</span>
+                                            <span>{{item.messages[item.messages.length - 1].date.hours}}:{{item.messages[item.messages.length - 1].date.minutes}}:{{item.messages[item.messages.length - 1].date.seconds}}</span>
                                         </div>
 
                                     </div>
