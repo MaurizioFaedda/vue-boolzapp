@@ -36,26 +36,21 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     isActive: false,
                     status: 'sent'
 
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
-
+                    date: '10/01/2020 15:50:00',
                     message: 'Ricordati di dargli da mangiare',
                     isActive: false,
                     status: 'sent'
 
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
-
+                    date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
                     isActive: false,
                     status: 'received'
@@ -70,22 +65,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '20/03/2020 16:30:00',
                     message: 'Ciao come stai?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '20/03/2020 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     isActive: false,
                     status: 'sent'
@@ -98,22 +90,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '28/03/2020 10:10:40',
                     message: 'La Marianna va in campagna',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '28/03/2020 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -126,15 +115,13 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date:'10/01/2020 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
                     isActive: false,
                     status: 'received'
@@ -147,22 +134,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
                     date: t,
-                    dateView: view_hh_mm,
                     message: 'Ricordati di dargli da mangiare',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Tutto fatto!',
                     isActive: false,
                     status: 'received'
@@ -175,22 +159,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Ciao come stai?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     isActive: false,
                     status: 'sent'
@@ -203,22 +184,19 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '28/03/2020 16:15:22',
                     message: 'La Marianna va in campagna',
                     isActive: false,
                     status: 'received'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '28/03/2020 16:15:22',
                     message: 'Sicuro di non aver sbagliato chat?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -231,15 +209,13 @@ var app = new Vue ({
                 visible: true,
                 messages: [
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     isActive: false,
                     status: 'sent'
                     },
                     {
-                    date: t,
-                    dateView: view_hh_mm,
+                    date: '10/01/2020 15:30:55',
                     message: 'Si, ma preferirei andare al cinema',
                     isActive: false,
                     status: 'received'
@@ -251,6 +227,7 @@ var app = new Vue ({
     },
 
     methods: {
+
 
         sentIcon(iIcon) {
             if (this.iIcon == 0) {
@@ -271,19 +248,31 @@ var app = new Vue ({
         },
 
         sent_new_message(element, i) {
-            let t =  moment().format('HH:mm:ss, MM DD YYYY');
-            let view_hh_mm = t.slice(0, 8);
+            let t =  moment().format('MM/DD/YYYY HH:mm:ss');
 
             // let view_hh_mm = t.slice(0, 8);
           this.contacts[i].messages.push({
               date: t,
-              dateView: view_hh_mm,
               message: element,
               status: 'sent',
               isActive: false
 
           })
           this.new_message = ''
+        },
+
+        print_date(i, j) {
+            let my_date = this.contacts[i].messages[j].date;
+            let hh_mm = my_date.slice(10, 16);
+            return hh_mm
+
+        },
+
+        print_last_date(i) {
+            let my_date = this.contacts[i].messages[this.contacts[i].messages.length - 1].date;
+            let hh_mm = my_date.slice(10, 16);
+            return hh_mm
+
         },
 
         // received_new_message(i) {
@@ -300,12 +289,10 @@ var app = new Vue ({
 
 
                 setTimeout(() => {
-                    let t =  moment().format('HH:mm:ss, MM DD YYYY');
-                    let view_hh_mm = t.slice(0, 8);
+                    let t =  moment().format('MM/DD/YYYY HH:mm:ss');
 
                     this.contacts[i].messages.push({
                     date: t,
-                    dateView: view_hh_mm,
                     message: 'Si hai ragione!',
                     status: 'received',
                     isActive: false
@@ -362,6 +349,7 @@ var app = new Vue ({
             })
         }
 
+
         // myTime(contactsIndex) {
         //
         //     let hour = this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].date.hours;
@@ -371,7 +359,16 @@ var app = new Vue ({
         //
         // }
 
+    },
+
+    created: function() {
+        let d = this.contacts[0].messages[1].date;
+        let t = d.slice(10, 16);
+        console.log(t);
+
     }
+
+    // 10/01/2020 15:30:55
 
 
 })

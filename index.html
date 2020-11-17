@@ -64,7 +64,7 @@
                                             <p>{{item.messages[item.messages.length - 1].message}}</p>
                                         </div>
                                         <div class="time-info">
-                                            <span>{{item.messages[item.messages.length - 1].dateView}}</span>
+                                            <span>{{print_last_date(contactsIndex)}}</span>
                                         </div>
 
                                     </div>
@@ -84,7 +84,7 @@
                                     </div>
                                     <div class="name">
                                         <h3>{{contacts[contactsIndex].name}}</h3>
-                                        <p>Ultimo accesso oggi alle <span>{{this.contacts[contactsIndex].messages[this.contacts[contactsIndex].messages.length - 1].dateView}}</span></p>
+                                        <p>Ultimo accesso oggi alle <span>{{print_last_date(contactsIndex)}}</span></p>
 
                                     </div>
                                 </div>
@@ -100,9 +100,11 @@
                         <div class="chat-messages">
 
                             <div @click="add_class(item)" class="loop-message" v-for="(item, messagesIndex) in contacts[contactsIndex].messages"
-                                :class="item.status">{{item.message}}
+                                :class="item.status">
+                                {{item.message}}
+
                                 <i  class="fas fa-angle-down"></i>
-                                <span>{{item.dateView}}</span>
+                                <span>{{print_date(contactsIndex, messagesIndex)}}</span>
                                 <ul class="dropdown-menu" :class="{active: item.isActive}">
                                     <li>Message info</li>
                                     <li @click="remove_item(contactsIndex, messagesIndex), add_class(item)" >Delete message</li>
