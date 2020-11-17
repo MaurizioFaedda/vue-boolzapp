@@ -248,7 +248,7 @@ var app = new Vue ({
         },
 
         sent_new_message(element, i) {
-            let t =  moment().format('MM/DD/YYYY HH:mm:ss');
+            let t =  moment("DD MM YYYY hh:mm:ss")
 
             // let view_hh_mm = t.slice(0, 8);
           this.contacts[i].messages.push({
@@ -263,14 +263,15 @@ var app = new Vue ({
 
         print_date(i, j) {
             let my_date = this.contacts[i].messages[j].date;
-            let hh_mm = my_date.slice(10, 16);
+            let hh_mm = moment(my_date).format('LT');
             return hh_mm
 
         },
 
         print_last_date(i) {
             let my_date = this.contacts[i].messages[this.contacts[i].messages.length - 1].date;
-            let hh_mm = my_date.slice(10, 16);
+            let hh_mm = moment(my_date).format('LT');
+
             return hh_mm
 
         },
@@ -289,7 +290,7 @@ var app = new Vue ({
 
 
                 setTimeout(() => {
-                    let t =  moment().format('MM/DD/YYYY HH:mm:ss');
+                    let t =  moment("DD MM YYYY hh:mm:ss")
 
                     this.contacts[i].messages.push({
                     date: t,
@@ -360,13 +361,12 @@ var app = new Vue ({
         // }
 
     },
+    //
+    // created: function() {
+    //     let d = this.contacts[0].messages[1].date;
+    //     let t = d.slice(10, 16);
+    //     console.log(t);
 
-    created: function() {
-        let d = this.contacts[0].messages[1].date;
-        let t = d.slice(10, 16);
-        console.log(t);
-
-    }
 
     // 10/01/2020 15:30:55
 
