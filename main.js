@@ -18,6 +18,7 @@ var app = new Vue ({
         iIcon: '0',
         icon: ['fa-microphone', 'fa-paper-plane'],
         // hh_mm: view_hh_mm,
+        active: '',
 
 
 
@@ -296,15 +297,24 @@ var app = new Vue ({
 
         },
 
+        push_on_click: function(i, j) {
 
 
-        add_class(item) {
-
-            if (item.isActive == false) {
-                item.isActive = true
-            } else item.isActive = false
+            let my_class = this.contacts[i].messages[j];
+            return my_class["active"] = '';
 
         },
+
+
+        // add_class(item) {
+        //
+        //     if (item.active == false) {
+        //         item.active = true
+        //     } else item.active = false
+        //
+        // },
+
+
 
 
 
@@ -312,7 +322,7 @@ var app = new Vue ({
 
             let myItem = this.contacts[contactsIndex].messages;
 
-            myItem[messagesIndex].isActive = false;
+            myItem[messagesIndex].isActive = true;
 
             // uso un setTimeout per dare il tempo di portare isActive=false in questo
             // modo l'indice successivo che diventerà l'indice corrente non avrà isActive=true quindi il dropdown aperto
@@ -325,10 +335,10 @@ var app = new Vue ({
         },
 
 
-        // push_on_click(i){
-        //     this.contacts[i].messages.push({
-        //         isActive: true;
-        //     })
+
+        //
+        //
+        //
         // },
 
 
