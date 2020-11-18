@@ -196,7 +196,7 @@ var app = new Vue ({
                     status: 'sent'
                     },
                     {
-                    date: '28/03/2020 16:15:22',
+                    date: '10/01/2020 15:30:55',
                     message: 'Ah scusa!',
                     isActive: false,
                     status: 'received'
@@ -248,7 +248,9 @@ var app = new Vue ({
         },
 
         sent_new_message(element, i) {
-            let t =  moment("DD MM YYYY hh:mm:ss")
+
+            let t =  moment().format("DD/MM/YYYY HH:mm:ss").toString();
+
 
             // let view_hh_mm = t.slice(0, 8);
           this.contacts[i].messages.push({
@@ -263,14 +265,14 @@ var app = new Vue ({
 
         print_date(i, j) {
             let my_date = this.contacts[i].messages[j].date;
-            let hh_mm = moment(my_date).format('LT');
+            let hh_mm = moment(my_date, 'DD/MM/YYYY HH:mm').format("HH:mm");
             return hh_mm
 
         },
 
         print_last_date(i) {
             let my_date = this.contacts[i].messages[this.contacts[i].messages.length - 1].date;
-            let hh_mm = moment(my_date).format('LT');
+            let hh_mm = moment(my_date, 'DD/MM/YYYY HH:mm').format("HH:mm");
 
             return hh_mm
 
@@ -290,7 +292,7 @@ var app = new Vue ({
 
 
                 setTimeout(() => {
-                    let t =  moment("DD MM YYYY hh:mm:ss")
+                    let t =  moment()
 
                     this.contacts[i].messages.push({
                     date: t,
