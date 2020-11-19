@@ -49,13 +49,13 @@
 
                                 <i class="fas fa-search"></i>
 
-                                <input type="text" v-model="search" placeholder="Cerca o inizia una nuova chat">
+                                <input onblur="visible_contact()" @keyup="search_contacts()" type="text" v-model="search" placeholder="Cerca o inizia una nuova chat">
 
                             </div>
                             <div class="all-chats">
 
                                 <div class="contacts-chat">
-                                    <div @click="change(contactsIndex)" class="data-contact" v-for="(item, contactsIndex) in filteredChat">
+                                    <div v-if="item.visible" @click="change(contactsIndex)" class="data-contact" v-for="(item, contactsIndex) in contacts">
                                         <div class="avatar-box">
                                             <img :src="'avatars_imgs/avatar'+item.avatar+'.png'" alt="">
                                         </div>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="chat-messages">
 
-                            <div class="loop-message" v-for="(item, messagesIndex) in contacts[contactsIndex].messages"  @click="push_on_click(contactsIndex, messagesIndex)"
+                            <div class="loop-message" v-for="(item, messagesIndex) in contacts[contactsIndex].messages"  @click="push_on_click(contactsIndex, messagesIndex), delete_on_click(contactsIndex, messagesIndex)"
                                 :class="item.status">
                                 {{item.message}}
 

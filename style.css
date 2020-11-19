@@ -327,3 +327,7 @@ li{
 .active{
     display: block;
 }
+
+.visible{
+    display: none;
+}

@@ -19,7 +19,8 @@ var app = new Vue ({
         icon: ['fa-microphone', 'fa-paper-plane'],
         // hh_mm: view_hh_mm,
         active: '',
-
+        search:'',
+        // ......
 
 
 
@@ -39,7 +40,8 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
+                    // active: true
 
                     },
                     {
@@ -264,16 +266,7 @@ var app = new Vue ({
 
         },
 
-        // received_new_message(i) {
-        //
-        //         this.contacts[i].messages.push({
-        //         date: '',
-        //         message: 'Si hai ragione',
-        //         status: 'received',
-        //         isActive: false
-        //
-        //     })
-        // },
+
         received_new_message(i) {
 
 
@@ -297,22 +290,20 @@ var app = new Vue ({
 
         },
 
-        push_on_click: function(i, j) {
+        push_on_click(i, j) {
 
 
-            let my_class = this.contacts[i].messages[j];
-            return my_class["active"] = '';
+            Vue.set(this.contacts[i].messages[j], 'active', true);
+
+
+        },
+
+        delete_on_click(i, j) {
+            delete Vue.set(this.contacts[i].messages[j], 'active', true);
 
         },
 
 
-        // add_class(item) {
-        //
-        //     if (item.active == false) {
-        //         item.active = true
-        //     } else item.active = false
-        //
-        // },
 
 
 
@@ -334,6 +325,27 @@ var app = new Vue ({
 
         },
 
+        search_contacts(){
+            this.contacts.forEach((item) => {
+                if(item.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    item.visibile = true;
+                } else {
+                    item.visible = false;
+                }
+            });
+
+        },
+
+        visible_contact(){
+            this.contacts.forEach((item) => {
+                item.visible = true;
+            });
+
+        }
+
+
+
+
 
 
         //
@@ -351,14 +363,19 @@ var app = new Vue ({
             })
         },
 
+
+
+
     },
-    //
-    // created: function() {
-    //     let d = this.contacts[0].messages[1].date;
-    //     let t = d.slice(10, 16);
-    //     console.log(t);
 
+    created: function() {
+        // let name_array = this.contacts[0].name.split("");
+        //
+        // search_contacts: function(item){
+        //     let y = item.split("");
+        // };
 
+    }
     // 10/01/2020 15:30:55
 
 
