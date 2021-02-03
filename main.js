@@ -33,29 +33,37 @@ var app = new Vue ({
         contacts:
         [
             {
-                name: 'Mauro',
+                name: 'Luca',
                 avatar: '_0',
                 visible: true,
                 messages: [
-                    {
-                    date: '10/01/2020 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
-                    status: 'sent',
-                    // active: true
 
-                    },
                     {
                     date: '10/01/2020 15:50:00',
-                    message: 'Ricordati di dargli da mangiare',
+                    message: 'Ei!',
                     status: 'sent'
 
                     },
                     {
-                    date: '10/01/2020 16:15:22',
-                    message: 'Tutto fatto!',
+                    date: '10/01/2020 15:51:00',
+                    message: 'Ciao Mauri!',
                     status: 'received'
 
-
+                    },
+                    {
+                    date: '10/01/2020 16:15:22',
+                    message: 'Come và a lavoro?',
+                    status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 16:15:22',
+                    message: 'Non benissimo. Non riesco a programmarmi le ferie😁',
+                    status: 'sent'
+                    },
+                    {
+                    date: '10/01/2020 16:15:22',
+                    message: '😞',
+                    status: 'received'
                     }
                 ]
             },
@@ -298,10 +306,18 @@ var app = new Vue ({
 
         },
 
-        delete_on_click(i, j) {
-            delete Vue.set(this.contacts[i].messages[j], 'active', true);
+        change_on_click(i, j) {
+
+            if (this.contacts[i].messages[j].active == true)
+            {
+                this.contacts[i].messages[j].active = false
+            } else {
+            } this.contacts[i].messages[j].active = true
+
+            // delete Vue.set(this.contacts[i].messages[j], 'active', true);
 
         },
+
 
 
 
@@ -327,8 +343,15 @@ var app = new Vue ({
 
         search_contacts(){
             this.contacts.forEach((item) => {
-                if(item.name.toLowerCase().includes(this.search.toLowerCase())) {
-                    item.visibile = true;
+                // if(item.name.toLowerCase().includes(this.search.toLowerCase())) {
+                //     item.visibile = true;
+                // } else {
+                //     item.visible = false;
+                // }
+                let contact_name = item.name.toLowerCase();
+                let searched_name = this.search.toLowerCase();
+                if(contact_name.includes(searched_name)) {
+                    item.visible = true;
                 } else {
                     item.visible = false;
                 }
@@ -336,12 +359,12 @@ var app = new Vue ({
 
         },
 
-        visible_contact(){
-            this.contacts.forEach((item) => {
-                item.visible = true;
-            });
-
-        }
+        // visible_contact(){
+        //     this.contacts.forEach((item) => {
+        //         item.visible = true;
+        //     });
+        //
+        // }
 
 
 
