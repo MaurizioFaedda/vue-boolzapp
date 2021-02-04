@@ -41,29 +41,34 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Ei!',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
 
                     },
                     {
                     date: '10/01/2020 15:51:00',
                     message: 'Ciao Mauri!',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
 
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Come và a lavoro?',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: 'Non benissimo. Non riesco a programmarmi le ferie😁',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 16:15:22',
                     message: '😞',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     }
                 ]
             },
@@ -75,17 +80,20 @@ var app = new Vue ({
                     {
                     date: '20/03/2020 16:30:00',
                     message: 'Ciao come stai?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '20/03/2020 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     },
                     {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     }
                 ],
             },
@@ -97,17 +105,20 @@ var app = new Vue ({
                     {
                     date: '28/03/2020 10:10:40',
                     message: 'La Marianna va in campagna',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     },
                     {
                     date: '28/03/2020 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     }
                 ],
             },
@@ -119,12 +130,14 @@ var app = new Vue ({
                     {
                     date:'10/01/2020 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     }
                 ],
             },
@@ -136,17 +149,20 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: t,
                     message: 'Ricordati di dargli da mangiare',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     }
                 ],
             },
@@ -158,17 +174,20 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Ciao come stai?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     }
                 ],
             },
@@ -180,17 +199,20 @@ var app = new Vue ({
                     {
                     date: '28/03/2020 16:15:22',
                     message: 'La Marianna va in campagna',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     },
                     {
                     date: '28/03/2020 16:15:22',
                     message: 'Sicuro di non aver sbagliato chat?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Ah scusa!',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     }
                 ],
             },
@@ -202,12 +224,14 @@ var app = new Vue ({
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
-                    status: 'sent'
+                    status: 'sent',
+                    isActive: false
                     },
                     {
                     date: '10/01/2020 15:30:55',
                     message: 'Si, ma preferirei andare al cinema',
-                    status: 'received'
+                    status: 'received',
+                    isActive: false
                     }
                 ],
             }
@@ -247,7 +271,7 @@ var app = new Vue ({
               date: t,
               message: element,
               status: 'sent',
-
+              isActive: false
 
           });
           Vue.nextTick(function() {
@@ -286,6 +310,7 @@ var app = new Vue ({
                         date: t,
                         message: 'Si hai ragione!',
                         status: 'received',
+                        isActive: false
                     });
                     Vue.nextTick(function() {
                         let chat_scroll = document.getElementsByClassName('chat-messages')[0];
@@ -306,16 +331,13 @@ var app = new Vue ({
 
         },
 
-        change_on_click(i, j) {
+        show_menu(item) {
 
-            if (this.contacts[i].messages[j].active == true)
-            {
-                this.contacts[i].messages[j].active = false
-            } else {
-            } this.contacts[i].messages[j].active = true
+            if (item.isActive == false) {
+                item.isActive = true
+            } else item.isActive = false
 
             // delete Vue.set(this.contacts[i].messages[j], 'active', true);
-
         },
 
 
@@ -343,11 +365,7 @@ var app = new Vue ({
 
         search_contacts(){
             this.contacts.forEach((item) => {
-                // if(item.name.toLowerCase().includes(this.search.toLowerCase())) {
-                //     item.visibile = true;
-                // } else {
-                //     item.visible = false;
-                // }
+
                 let contact_name = item.name.toLowerCase();
                 let searched_name = this.search.toLowerCase();
                 if(contact_name.includes(searched_name)) {
@@ -358,24 +376,6 @@ var app = new Vue ({
             });
 
         },
-
-        // visible_contact(){
-        //     this.contacts.forEach((item) => {
-        //         item.visible = true;
-        //     });
-        //
-        // }
-
-
-
-
-
-
-        //
-        //
-        //
-        // },
-
 
     },
 
